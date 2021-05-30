@@ -1,0 +1,47 @@
+
+N,M = map(int,input().split())
+
+X = []
+Y = []
+X_name = []
+
+for i in range(N):
+    row = input().split()
+    
+    X_name.append(row[0])
+    Y.append(int(row[1]))
+    
+    Xrow = row[2:]
+    
+    for j in range(len(Xrow)):
+        k = Xrow[j].split(':')
+        Xrow[j] = float(k[1])
+        
+    X.append(Xrow)
+    
+num_query = int(input())
+q = []
+q_name = []
+
+for i in range(num_query):
+    row = input().split()
+    q_name.append(row[0])
+    Qrow = row[1:]
+    for j in range(len(Qrow)):
+        k = Qrow[j].split(':')
+        Qrow[j] = float(k[1])
+        
+    q.append(Qrow)
+ 
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier(max_depth=2, random_state=0, n_estimators=100)
+clf.fit(X, Y)
+STDOUT = clf.predict(q)
+
+for i in range(len(STDOUT)):
+    print(q_name[i],end='')
+    if(STDOUT[i]==1):
+        print(' +1')
+    else:
+        print(' -1')
+
