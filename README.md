@@ -1,6 +1,6 @@
 # Quora-Answer-Classifier-Problem-from-Hacker-Rank 
 
-(https://www.hackerrank.com/challenges/quora-answer-classifier/problem)
+(https://www.hackerrank.com/challenges/quora-answer-classifier/problem) This is just a solution of the problem from Hacker Rank. 
 
 Quora uses a combination of machine learning (ML) algorithms and moderation to ensure high-quality content on the site. High answer quality has helped Quora distinguish itself from other Q&A sites on the web.  
 
